@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+} 
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle, #8a8a8a 10%, transparent 11%);
+        background-size: 6em 6em;
+        background-color: #000000;
+        opacity: 1;
+    /* background-color: #181818; */
+    background-image: url("./img/pattern.png");
+    background-attachment: fixed;
+    padding-bottom: 8rem;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8rem;
+    align-items: baseline;
+    overflow: hidden;
+}
+
+.logo {
+    max-width: 100%;
+    width: 300px;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.text {
+    font-size: 2rem;
+    color: #fff;
+    margin-left: auto;
+    animation: slide-in-bottom 0.5s 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.glyph-container {
+    margin-top: 4rem;
+    padding: 0 5rem;
+}
+
+.glyph-title {
+    font-size: 3.5rem;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+    color: #efcc32;
+}
+
+.glyph-items {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 4rem;
+    color: #fff;
+    padding-left: 2.5rem;
+}
+
+.glyph-box {
+    padding: 2.5rem;
+    margin: .5rem;
+    width: 10rem;
+    text-align: center;
+    border-radius:  1rem;
+    transition: transform .2s ease-in-out;
+}
+
+.glyph-box:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transform: translateY(-.5rem);
+}
+
+#alert-box {
+    display: flex;
+    justify-content: center;
+}
+
+#alert {
+    position: fixed;
+    top: 90%;
+    z-index: 1;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
